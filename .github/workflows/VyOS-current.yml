@@ -1,4 +1,4 @@
-name: VyOS-LTS
+name: VyOS-current
 
 on:
   push:
