@@ -18,7 +18,7 @@ jobs:
       run: |
         docker run --rm --privileged -v $(pwd)/vyos-build:/vyos -w /vyos vyos/vyos-build:current  bash -c './configure --architecture amd64 --build-by "Hazaki"  && sudo make iso'
     - name: Persist created iso
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@main
       with:
         name: vyos-lts
         path: 'vyos-build/build/live-image-amd64.hybrid.iso'
