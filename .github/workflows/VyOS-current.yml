@@ -17,7 +17,7 @@ jobs:
     - name: Build iso
       run: |
         docker run --rm --privileged -v $(pwd)/vyos-build:/vyos -w /vyos vyos/vyos-build:current  bash -c './configure --architecture amd64 --build-by "Hazaki"  && sudo make iso'
-    - name: Persist created iso
+    - name: Upload iso
       uses: actions/upload-artifact@main
       with:
         name: vyos-current
