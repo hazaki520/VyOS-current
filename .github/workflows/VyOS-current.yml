@@ -1,5 +1,4 @@
 name: VyOS-current
-
 on:
   push:
     branches: [ master ]
